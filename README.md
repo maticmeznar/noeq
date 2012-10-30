@@ -2,7 +2,7 @@
 
 # Install
 
-		$ goinstall github.com/bmizerany/noeq.go
+		$ go get github.com/ex-nerd/noeq
 
 # Use
 
