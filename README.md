@@ -2,14 +2,14 @@
 
 # Install
 
-		$ go get github.com/ex-nerd/noeq
+		$ go get github.com/noeq/noeq
 
 # Use
 
 		package main
 
 		import (
-			"github.com/bmizerany/noeq.go"
+			"github.com/noeq/noeq"
 			"log"
 		)
 
@@ -56,11 +56,11 @@ pull-request button.
 
 # Issues
 
-These are tracked in this repos Github [issues tracker](http://github.com/bmizerany/weiqi.go/issues).
+These are tracked in this repos Github [issues tracker](http://github.com/noeq/noeq/issues).
 
 # LICENSE
 
-C)opyright (C) 2011 by Blake Mizerany ([@bmizerany](http://twitter.com/bmizerany))
+Copyright (C) 2011 by Blake Mizerany ([@bmizerany](http://twitter.com/bmizerany))
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
