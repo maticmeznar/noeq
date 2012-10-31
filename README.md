@@ -1,4 +1,4 @@
-# noeq.go - A Go client for noeqd
+# noeq - A Go client library for noeqd
 
 # Install
 
