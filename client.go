@@ -7,6 +7,8 @@ import (
 	"math/rand"
 	"net"
 	"sync"
+	"time"
+	"log"
 )
 
 var (
@@ -84,4 +86,27 @@ func (c *Client) GenOne() (uint64, error) {
 		return 0, err
 	}
 	return ids[0], nil
+}
+
+
+// The client attempts to give the user as much insight as possible
+// It will *not* automaticly attempt a reconnect
+// on error. However, it will attempt a reconnect if you ask for
+// another id after an error has occured. This gives the user more
+// control over how/when to attempt a reconnect.
+// This function will automatically attempt a reconnect after sleeping 
+// for 1 ms. It will attempt reconnection 3 times
+func (c *Client) ReallyGenOne() (id uint64, err error) {
+    for trys := 3; trys > 0; trys-- {
+        id, err = c.GenOne()
+        if err != nil {
+            log.Println("noeq: Failed to GenOne, retrying after 1 ms sleep; error:", err)
+            time.Sleep(1 * time.Millisecond)
+            continue
+        }
+
+        return
+    }
+
+    return
 }
