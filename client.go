@@ -7,7 +7,6 @@ import (
 	"math/rand"
 	"net"
 	"sync"
-	"time"
 	"log"
 )
 
@@ -101,7 +100,6 @@ func (c *Client) ReallyGenOne() (id uint64, err error) {
         id, err = c.GenOne()
         if err != nil {
             log.Println("noeq: Failed to GenOne, retrying after 1 ms sleep; error:", err)
-            time.Sleep(1 * time.Millisecond)
             continue
         }
 
